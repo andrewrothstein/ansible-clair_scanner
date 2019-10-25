@@ -1,0 +1,3 @@
+---
+clair_scanner_os: windows
+clair_scanner_suffix: .exe

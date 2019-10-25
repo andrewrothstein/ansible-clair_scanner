@@ -1,0 +1,21 @@
+---
+# defaults file for clair_scanner
+clair_scanner_ver: v12
+clair_scanner_os: linux
+clair_scanner_arch: amd64
+clair_scanner_mirror: https://github.com/arminc/clair-scanner/releases/download
+clair_scanner_install_dir: /usr/local/bin
+clair_scanner_checksums:
+  v12:
+    # https://github.com/arminc/clair-scanner/releases/download/v12/clair-scanner_darwin_386
+    darwin_386: sha256:c4a8f8fadc6ee5d1a21f1e4390d4ee859cbbda0e0dd647182ff2235a14b54171
+    # https://github.com/arminc/clair-scanner/releases/download/v12/clair-scanner_darwin_amd64
+    darwin_amd64: sha256:75a66562c7464c7ce07607897148aa2da440f3d44b9d400ecb7a1475a6896759
+    # https://github.com/arminc/clair-scanner/releases/download/v12/clair-scanner_linux_386
+    linux_386: sha256:81727a9539e638397ceae56e15c401cd42205450211e71670acc906b4c27a1cf
+    # https://github.com/arminc/clair-scanner/releases/download/v12/clair-scanner_linux_amd64
+    linux_amd64: sha256:44f2a3fdd7b0d102c98510e7586f6956edc89ab72c6943980f92f4979f7f4081
+    # https://github.com/arminc/clair-scanner/releases/download/v12/clair-scanner_windows_386.exe
+    windows_386: sha256:7a37725844280229261b4124c9122f42002cba646d44dbf0835be5b15594c811
+    # https://github.com/arminc/clair-scanner/releases/download/v12/clair-scanner_windows_amd64.exe
+    windows_amd64: sha256:36bfc17faced0d5829ec6823cd2bdc980c95eff4ba12b3b55c0bc070b92af5e1
