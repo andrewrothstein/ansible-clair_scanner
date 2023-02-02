@@ -1,6 +1,9 @@
 ---
 # vars file for clair_scanner
+clair_scanner_os: '{{ ansible_system | lower }}'
+clair_scanner_arch: '{{ clair_scanner_arch_map[ansible_architecture] }}'
 clair_scanner_platform: '{{ clair_scanner_os }}_{{ clair_scanner_arch }}'
 clair_scanner_url: '{{ clair_scanner_mirror }}/{{ clair_scanner_ver }}/clair-scanner_{{ clair_scanner_platform }}{{ clair_scanner_suffix | default("") }}'
-clair_scanner_lexe: '{{ clair_scanner_install_dir }}/clair-scanner_{{ clair_scanner_platform }}-{{ clair_scanner_ver }}{{ clair_scanner_suffix | default("") }}'
+clair_scanner_exe: '{{ clair_scanner_install_dir }}/clair-scanner_{{ clair_scanner_platform }}-{{ clair_scanner_ver }}{{ clair_scanner_suffix | default("") }}'
+clair_scanner_link: '{{ clair_scanner_install_dir }}/clair-scanner'
 clair_scanner_checksum: '{{ clair_scanner_checksums[clair_scanner_ver][clair_scanner_platform] }}'

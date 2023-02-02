@@ -1,6 +1,6 @@
 andrewrothstein.clair_scanner
 =========
-[![Build Status](https://travis-ci.org/andrewrothstein/ansible-clair_scanner.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-clair_scanner)
+![Build Status](https://github.com/andrewrothstein/ansible-clair_scanner/actions/workflows/build.yml/badge.svg)
 
 Installs [clair-scanner](https://github.com/arminc/clair-scanner).
 

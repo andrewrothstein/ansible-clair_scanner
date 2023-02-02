@@ -9,18 +9,18 @@
       skip: true
       paths:
         - '{{ role_path }}/vars'
-- name: download
-  become: yes
+- name: downloading {{ clair_scanner_url }} to {{ clair_scanner_exe }}
+  become: true
   become_user: root
   get_url:
     url: '{{ clair_scanner_url }}'
-    dest: '{{ clair_scanner_lexe }}'
+    dest: '{{ clair_scanner_exe }}'
     checksum: '{{ clair_scanner_checksum }}'
     mode: 0755
-- name: link
-  become: yes
+- name: linking {{ clair_scanner_link }} to {{ clair_scanner_exe }}
+  become: true
   become_user: root
   file:
-    src: '{{ clair_scanner_lexe }}'
-    dest: '{{ clair_scanner_install_dir }}/clair-scanner'
+    src: '{{ clair_scanner_exe }}'
+    dest: '{{ clair_scanner_link }}'
     state: link

@@ -7,15 +7,6 @@ galaxy_info:
     - MIT
   min_ansible_version: 2.0
   platforms:
-    - name: EL
-      versions:
-        - all
-    - name: Fedora
-      versions:
-        - all
-    - name: Ubuntu
-      versions:
-        - all
     - name: Alpine
       versions:
         - all
@@ -25,10 +16,18 @@ galaxy_info:
     - name: Debian
       versions:
         - buster
-        - jessie
-        - stretch
+        - bullseye
+    - name: EL
+      versions:
+        - 8
+        - 9
+    - name: Fedora
+      versions:
+        - 36
+        - 37
+    - name: Ubuntu
+      versions:
+        - all
   galaxy_tags:
     - development
   role_name: clair_scanner
-
-dependencies: []

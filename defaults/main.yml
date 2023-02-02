@@ -1,8 +1,10 @@
 ---
 # defaults file for clair_scanner
 clair_scanner_ver: v12
-clair_scanner_os: linux
-clair_scanner_arch: amd64
+clair_scanner_arch_map:
+  aarch64: arm64
+  arm64: arm64
+  x86_64: amd64
 clair_scanner_mirror: https://github.com/arminc/clair-scanner/releases/download
 clair_scanner_install_dir: /usr/local/bin
 clair_scanner_checksums:
