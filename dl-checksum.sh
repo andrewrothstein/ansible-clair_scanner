@@ -8,7 +8,8 @@ dl()
     local os=$2
     local arch=$3
     local suffix=${4:-}
-    local platform="${os}_${arch}"
+    local platform="${os}-${arch}"
+    # https://github.com/arminc/clair-scanner/releases/download/14.0.0/clair-scanner_linux-amd64
     local url=$MIRROR/$ver/clair-scanner_${platform}${suffix}
     local lfile=$DIR/clair-scanner_${platform}-$ver${suffix}
 
@@ -24,12 +25,12 @@ dl()
 dlver () {
     local ver=$1
     printf "  %s:\n" $ver
-    dl $ver darwin 386
     dl $ver darwin amd64
-    dl $ver linux 386
+    dl $ver darwin arm64
     dl $ver linux amd64
-    dl $ver windows 386 .exe
+    dl $ver linux arm64
     dl $ver windows amd64 .exe
+    dl $ver windows arm64 .exe
 }
 
-dlver ${1:-v12}
+dlver ${1:-14.0.0}
