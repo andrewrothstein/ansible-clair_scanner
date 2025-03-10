@@ -1,4 +1,5 @@
 ---
-- hosts: all
+- name: Testing andrewrothstein.clair_scanner
+  hosts: all
   roles:
     - role: '{{ playbook_dir }}'
